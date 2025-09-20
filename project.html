@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <style>body{
+            background: linear-gradient(135deg, #6efb, #a77e);
+        }
+
+            *{
+                box-sizing: border-box;
+            }
+            .f{
+                font-size: 50px;
+                color: rgb(240, 231, 248);
+                
+            }
+            .ttle{
+                border-bottom-right-radius: 100px;
+                border-top-left-radius:100px ;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                background-image: url("https://media.istockphoto.com/id/2210688897/photo/ux-ui-design-web-and-application-user-design-concepts-web-design-application-design-user.jpg?s=1024x1024&w=is&k=20&c=9N6NIm5jxicoFvBeFNJnkafdNQM8mhBbU0-YWnLyW2s=");
+        }
+              .aim{
+                color: rgb(228, 229, 145);
+                font-size: 20px;
+              }
+            .bt{
+                
+                background: blueviolet;
+                border-radius: 20px;
+                width: 120px;
+                height: 60px;
+                font-size: 20px;
+            
+                
+
+            }
+            
+            .bt:hover{
+                color: brown;
+                opacity: 2px;
+            }
+            .bt2:hover{
+                color: brown;
+                opacity: 2px;
+            }
+            .bt2{
+                
+                background-color:blueviolet ;
+                   border-radius: 20px;
+                width: 200px;
+                height: 60px;
+                font-size: 20px;
+                margin-top: 10px;
+            
+            }
+            #tmt{
+                display:none;
+                border: solid black 1px;
+                font-size: 20px;
+            }
+            
+            h3{
+                
+               
+                 border-width: 1px;
+                 display: none;
+                 
+
+
+            }
+            h3:nth-child(odd){
+                color :brown;
+            }
+            .allbt{
+                text-align: center;
+            }
+            .end{
+                color: dimgray;
+                text-align: center;
+    
+            }
+            .containertext{
+            
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #task-input {
+            width: calc(100% - 70px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        #add-task-btn {
+            width: 60px;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #add-task-btn:hover {
+            background-color: #4cae4c;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        li button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        li button:hover {
+            background-color: #c9302c;
+        }
+         nav {
+            background-color: #333;
+            padding: 10px 0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: inline-block;
+         }
+          nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            border-radius: 6px;
+        }
+                nav a:hover {
+            background-color: #575757;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+            text-align: left;
+        }
+          .content p1 {
+            margin-top: 0;
+            color: #333;
+        }
+          .content:not(#home-content) {
+            display: none;
+        }
+        p.me{
+            font-size: 15px;
+        }
+        h4{
+            font-size: 20px;
+            
+            
+        }
+        tr th{
+            color: teal;
+            background-color:burlywood;
+        }
+        
+        .containerimg {
+            text-align: center;
+            background-color: rgb(161, 189, 194);
+            padding: 10px;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 90%;
+            justify-items: center;
+            
+            
+        }
+        .disp{
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #1a202c;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #image-container {
+            width: 90%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: paleturquoise;
+        }
+
+        #slideshow-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 1s ease-in-out;
+            opacity: 0; /* Initially hide the image */
+        }
+        .himg{
+            color: peru;
+            
+        }
+        
+        .id{
+            background-color:gainsboro;
+            height: 40px;
+            width: 280px;
+            border-radius: 10px;
+            
+
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .submit{
+            color:white; 
+            background-color: green; 
+            font-size: 15px;
+            position: absolute;
+            right: 0%;
+        
+        }
+        .boxar{
+            place-items: center;
+        }
+
+        .option-button {
+  background-color:gray;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 60px;
+  gap: 5px; /* Adds space between text and symbol */
+  font-size: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  
+        }
+        .opt{
+            margin-left: 200px;
+            width: 200px;
+            height:40px ;
+            font-size: 17px;
+            margin-top: 20px;
+        }
+  button span {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.selectb{
+    justify-items: center;
+    box-sizing: border-box;
+    background-color: #ccc;
+    
+    
+}
+.start{
+    justify-items: center;
+    color:blue;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    background-color: wheat;
+}
+.start1{
+     justify-items: center;
+    color:blue;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    background-color: wheat;
+
+}
+.gt{
+    justify-items: center;
+}
+.story{
+    box-sizing: border-box;
+    background-image: url("https://plus.unsplash.com/premium_photo-1683288706400-a6355868d9a2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1pbi1zYW1lLXNlcmllc3wzfHx8ZW58MHx8fHx8");
+    border-radius: 20px;
+    max-width: 800px;
+    width: 80%; 
+    margin-top: 20px;
+    
+}
+.storydv{
+
+ justify-items: center;
+ 
+}
+h{
+    color: peru;
+    margin-left: 20px;
+    font-size: 30px;
+}
+p{
+    margin-left: 20px;
+    color: aliceblue;
+
+}
+.im{
+    height: 80px;
+    width:80px;
+    border-radius: 50px;
+    margin-top: 20px;
+
+}
+.imdv{
+ display: flex;
+ margin-left: 30px;
+ margin-top: 30px;
+ }
+        </style>
+
+    </head>
+    <body>
+       <div class = "container1">
+        <nav>
+            <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#support">Support</a>
+        
+        </nav>  
+         <div id="home-content" class="content">
+        <h2>Home Page</h2>
+        <p>Welcome to the home page! This is a simple demonstration of how to create a single-page application using HTML, CSS, and jQuery.</p>
+    </div>
+
+    <div id="about-content" class="content">
+        <h2>About Us</h2>
+        <p>This page provides some basic information about our project. We are using jQuery to handle the navigation without a page reload.</p>
+    </div>
+
+    <div id="support-content" class="content">
+        <h2>Support</h2>
+        <p>If you need assistance, please feel free to reach out to us. This is the support section of our single-page application.</p>
+    </div>
+
+
+         <div class = "ttle">
+            <div class="imdv">
+            <img class="im" src="https://media.istockphoto.com/id/2210688897/photo/ux-ui-design-web-and-application-user-design-concepts-web-design-application-design-user.jpg?s=1024x1024&w=is&k=20&c=9N6NIm5jxicoFvBeFNJnkafdNQM8mhBbU0-YWnLyW2s=">
+            <h1 class="f">DIGITAL DREAMERS</h1>
+             </div>
+            <P class="aim"><strong> Aims at sharing of Resources, Ideas and <br>solving a real life problems</strong></P>
+
+               </div>
+               <div class="gt">
+               <div class="gtst">
+                <button class="start1">Get Started</button>
+                 <button class="start">Go to the End</button>
+               </div>
+               </div>
+
+           <div class="center">
+             <div class="boxar">
+        <h1 class="plc" style="color:red; font-size:20px;">What Do You Want to Study:</h1>
+        <div class="relative">
+            <form>
+            <input 
+                id="my-input" 
+                type="text" 
+                placeholder="Start typing..." 
+                class="id">
+        </div>
+        
+    </form>
+ 
+  </div>
+         </div>
+
+          <div class="disp">
+         <div class="containerimg">
+    <h1 class="himg">Let's Enjoy In Coding!!</h1>
+    <div id="image-container">
+        <img id="slideshow-image" alt="Slideshow Image">
+    </div>
+</div>
+</div>
+<div class="storydv">
+ <button class="opt">About Page</button>
+ <div class="story">
+    <h>About this Page:</h>
+    <p>This Page is designed to share academic resourses. Student can find any books, online web link and some stuff which wll highly help them to access the online reasourse with no time. I have seen many students get stuck to find better website, free book, better youtube channels, This web application will help you to find those resourses. Stay stick to this web application to build your future.</p>
+
+ </div>
+ </div>
+
+         <div class="allbt">
+            <div class="btdv">
+         <button class = "bt">view all couirses</button>
+         
+      <h3>Web and Mobile Programming</h3>
+      <h3>Machine Learning</h3>
+        <h3>Cloud Computing</h3>
+        <h3>Internet of Thing(IoT)</h3>
+        <h3>Acc and Financial Man..</h3>
+        <h3>Advanced Linear Algebra</h3>
+         <h3>programming</h3>
+             <h3>Networking</h3>
+                 <h3>Databases</h3>
+                     <h3>switch and routing</h3>
+                         <h3>Artificial Intelligence</h3>
+                             <h3>Data structure and Algorithm</h3>
+                                 <h3>cyber Security</h3>
+                                     <h3>Operating System</h3>
+         
+        
+             </div>
+     
+       <div class="tb">
+        <button class="bt2">CourseReadingGuide</button>
+        <div class="tmtdv">
+        <table id="tmt">
+            <tr>
+                <th>ReadingPlan</th>
+                   <th>Recommendation</th>
+                      <th>ReadingHrs</th>
+            </tr>
+            <tr>
+                <td>weekly:</td>
+                <td>Time Management</td>
+                <td>5hrs/w</td>
+            </tr>
+            <tr>
+                <td>monthly:</td>
+                <td>Stay Focus</td>
+                <td>115hr/m</td>
+            </tr>
+            <tr>
+                <td>periodically:</td>
+                <td>Review,Recall and Re-read </td>
+                <td>50hrs/yr</td>
+            </tr>
+        </table>
+        </div>
+        
+       </div>
+         </div>
+          <div class="containertext">
+        <h2>Comment section:</h2>
+        <div class="input-container">
+            <input type="text" id="task-input" placeholder="drop your thought here">
+            <button id="add-task-btn">Add</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+     <div class="selectb">
+     <button id="myButton" class="option-button">select courses to study<span>></span></button>
+     <div id="chkbox"></div>
+      <button id="myButton" class="option-button">choose study plan<span>></span></button>
+      <div id="chkbox"></div>
+      <button id="myButton" class="option-button">mark your progress<span>></span></button>
+      <div id="chkbox"></div>
+      <button id="myButton" class="option-button">select your categories<span>></span></button>
+       </div>
+       
+      <div id="chkbox"></div>
+    <div>
+     <h4>click the link bellow to find more online courses:</h4>
+     <a href="https://coursera.org">coursera</a>
+     <a href="https://w3shool.org">w3schools</a>
+     <a href="https://khanacadamy.org">khanacadamy</a>
+     <a href="https://freecodecamp.org">freecodecamp</a>
+
+    </div>
+    
+         <div class="end"> 
+          <p class="me"><input type="checkbox">@2025, agree to all right reserved</p>
+         <p>created by : <strong>@engeene16!!</strong></p>
+         </div>
+         
+         </div>
+
+      <script src = "jquery.js"></script>
+      <script>
+        $(document).ready(function(){
+            $(".bt").click(function(event){
+                $("h3").toggle();
+
+            });
+
+           $(".bt2").click(function(event){
+                $("#tmt").toggle();
+                 
+            });
+          $('#add-task-btn').click(function() {
+                var taskText = $('#task-input').val().trim();
+                if (taskText !== "") {
+                    var listItem = $('<li><span>' + taskText + '</span><button class="remove-btn">Remove</button></li>');
+                    $('#task-list').append(listItem);
+                    $('#task-input').val('');
+                }
+            });
+
+            // Function to remove a task
+            $('#task-list').on('click', '.remove-btn', function() {
+                $(this).parent().remove();
+            });
+            $(".ho").click(function(event){
+                $("#txt").text("hisjk");
+                
+
+            });
+
+            $(".submit").click(function(event){
+                $(".paste").text("Your Request has been Successefully Submitted.");
+               //alert("Your Request has been Successefully Submitted.");
+                
+
+            });
+
+          const images = [
+            "https://media.istockphoto.com/id/1321462048/photo/digital-transformation-concept-system-engineering-binary-code-programming.jpg?s=1024x1024&w=is&k=20&c=SpP0lU7M-NkRIWUxZdL2rB_MtfegprwutPvbdy0TmMU=", 
+            "https://plus.unsplash.com/premium_photo-1683120963435-6f9355d4a776?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbXB1dGVyJTIwc2NpZW5jZXxlbnwwfHwwfHx8MA%3D%3D", 
+            "https://media.istockphoto.com/id/616902766/photo/dedicated-to-software-development.jpg?s=1024x1024&w=is&k=20&c=h0J7NUeyykHEVp91onhXvaEoKafOvlj6Jzb37kXweMI=",
+            "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+            "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvbXB1dGVyJTIwc2NpZW5jZXxlbnwwfHwwfHx8MA%3D%3D",
+          "https://media.istockphoto.com/id/2210688897/photo/ux-ui-design-web-and-application-user-design-concepts-web-design-application-design-user.jpg?s=1024x1024&w=is&k=20&c=9N6NIm5jxicoFvBeFNJnkafdNQM8mhBbU0-YWnLyW2s="
+            
+            
+        ];
+
+        let currentIndex = 0;
+        const slideshowImage = $('#slideshow-image');
+
+        function showNextImage() {
+            // Fade out the current image (if any)
+            slideshowImage.css('opacity', 0);
+            
+            // Wait for the fade-out to complete before changing the image source
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                slideshowImage.attr('src', images[currentIndex]);
+
+                // Fade in the new image
+                slideshowImage.css('opacity', 1);
+            }, 1000); // Wait 1000ms (1 second) to match the transition duration
+        }
+
+        // Start the slideshow immediately
+        showNextImage();
+
+        // Set an interval to change the image every 5 seconds (5000ms)
+        setInterval(showNextImage, 3000);
+    
+          const phrases = [
+                "Search for courses...",
+                "What is your career?",
+                "Find any reasourses...",
+                "Vist our PlatForm...",
+                "Build Your Go Here..."
+            ];
+
+            let index = 0;
+            const input = $('#my-input');
+
+            // Function to update the placeholder text
+            const updatePlaceholder = function() {
+                input.attr('placeholder', phrases[index]);
+                index = (index + 1) % phrases.length;
+            };
+
+            // Call the function immediately and then every 2 seconds
+            updatePlaceholder();
+            setInterval(updatePlaceholder, 2000);
+
+        
+  $('#myButton').click(function() {
+              $("#chkbox").text("Computer Science" ).toggle();
+
+  });
+  $('.opt').click(function() {
+              $(".story").toggle();
+
+  });
+   $('nav a').on('click', function(e) {
+                // Prevent the default anchor link behavior
+                e.preventDefault();
+
+                // Get the ID of the target content div from the link's href
+                const targetId = $(this).attr('href').substring(1) + '-content';
+
+             //    Hide all content divs
+              $('.content').hide();
+
+                // Show the specific content div based on the target ID
+                $('#' + targetId).show();
+            });
+});
+        
+ </script>
+    </body>
+
+</html>
